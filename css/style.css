@@ -1,0 +1,47 @@
+/* Variables */
+:root {
+    --color-texto: rgb(0, 0, 0);
+    --color-fondo: white; 
+    --color-boton: darkcyan;
+    --color-autores: darkgrey;
+    --color-activo: goldenrod;
+}
+/* The Scroll behavior */
+body {
+  scroll-behavior: smooth;
+  background-color: bisque;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.hide {
+    display:none;
+}
+
+
+
+
+.error {
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  width: 235px;
+  text-align: center; 
+  font-size: 12px;
+  background: RGB(194, 46, 79);
+}
+
+.error::after {
+    content: '';
+    border-bottom: 15px solid RGB(194, 46, 79);
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    position: absolute;
+    left: 45%;
+    top: -14px;
+}
