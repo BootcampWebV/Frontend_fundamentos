@@ -21,7 +21,9 @@ body {
     display:none;
 }
 
-
+section#contact li.form-group label {
+    display: none;
+}
 
 
 .error {

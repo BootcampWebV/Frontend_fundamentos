@@ -28,7 +28,7 @@ export class FormContact {
         this.oSelectSeleccion.addEventListener('change',this.otroSlect.bind(this));
 
         this.oFormContact.addEventListener('submit', this.leerContact.bind(this));
-        this.definirValidaciones();
+        //this.definirValidaciones();
 
     }
     leerContact(oE) {
@@ -81,23 +81,27 @@ export class FormContact {
         this.oRestoTextoMessageInput.innerHTML = `${wordCounter} de un máximo de ${wordTotal} palabras`;
                 
         if (wordCounter >= wordTotal ) {
-            //this.oTextoMessageInput.setAttribute('disabled', true);
-            alert('Alcanzó el numero máximo de Palabras');
+            this.oTextoMessageInput.setAttribute('disabled', true);
+            //alert('Alcanzó el numero máximo de Palabras');
+            setTimeout(() => {
+                this.oTextoMessageInput.setAttribute('disabled', false);
+            }, 1000);
+            //alert('Alcanzó el numero máximo de Palabras');
             
         } 
         
     }
     otroSlect() {
-        let valorOpcion;
+        //let valorOpcion;
         console.log(this.oOtroHiden);
         console.log(this.oSelectSeleccion);
         console.log('this.oSelectSeleccion.value', this.oSelectSeleccion.value)
         
-        if (this.oSelectSeleccion.value === '') {
+        /*if (this.oSelectSeleccion.value === '') {
              valorOpcion = 'op1';
         } else {
             valorOpcion = this.oSelectSeleccion.value;
-        }
+        }*/
         console.log('this.oOtroHiden.classList', this.oOtroHiden.classList)
         
         //this.oOtroHiden.classList.toggle('hide');

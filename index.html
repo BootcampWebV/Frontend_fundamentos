@@ -12,58 +12,64 @@
     <script src="./js/app.js" type="module"></script>
 </head>
 <body>
-    
-    <scroll-container>
-    <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
-    <form id="myForm" action="/" method="post">
-        <fieldset>
-            <ul>
-                <li>
-                    <label for="name">
-                        <input type="text" name="name" id="name" placeholder="Name" required>
-                    </label>
-                    
-                </li>
-                <li>
-                    <label for="email">
-                        <input type="email" name="email" id="email" placeholder="Email Address" pattern:
-                        "pattern: [a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
-                    </label>
-                    
-                </li>
-                <li>
-                    <label for="telNum">
-                        <input type="tel" name="telNum" id="telNum" placeholder="Telefono" required>
-                    </label>
-                    
-                </li>
-                <li>
-                    <label for="selection">¿Como me has conocido?</label>
-                    <select name="selection" id="selection">
-                        <option value="op1" selected>Buscadores Web</option>
-                        <option value="op2">En el Bar</option>
-                        <option value="op3">En el Cine</option>
-                        <option value="op4">Otros</option>
-                    </select>
-                </li>
-                <div >
-                    <li id="form-otro" class="hide">
-                        <label for="otros">Ande?¿?¿?</label>
-                        <input type="text" name="otros" id="otros" placeholder="Otros...">
+    <section id="contact">
+        <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
+        <form name="myFor" id="myForm" action="/" method="post">
+            
+            <legend> Contacto</legend>
+            <fieldset>
+                <ul>
+                    <li>
+                        <label for="name">
+                            <input type="text" name="name" id="name" placeholder="Nombre" tabindex="1" required>
+                        </label>
+                        
                     </li>
-                </div>
-                <li>
-                    <label for="message">Mensaje</label>
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
-                    <p  id="res"></p>
-                </li>
-                <li>
-                    <button type="submit">Enviar</button>
-                </li>
-            </ul>
-        </fieldset>
-        
-    </form>
-    </croll-container>
+                    <li>
+                        <label for="email" required>
+                            <input type="email" name="email" id="email" placeholder="Email Address" tabindex="2" pattern:
+                            "pattern: [a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
+                        </label>
+                        
+                    </li>
+                    <li>
+                        <label for="telNum">
+                            <input type="tel" name="telNum" id="telNum" placeholder="Telefono" tabindex="3" pattern="[0-9]{9}" required>
+                        </label>
+                        
+                    </li>
+                    <li>
+                        <label for="selection">
+                            <select name="selection" id="selection" tabindex="4">
+                                <option value="op0" selected>¿Como me has conocido?</option>
+                                <option value="op1" >Buscadores Web</option>
+                                <option value="op2">En el Bar</option>
+                                <option value="op3">En el Cine</option>
+                                <option value="op4">Otros</option>
+                            </select>
+                        </label>
+                        
+                    </li>
+                    <div >
+                        <li id="form-otro" class="hide">
+                            <label for="otros">Ande?¿?¿?</label>
+                            <input type="text" name="otros" id="otros" placeholder="Otros..." tabindex="5">
+                        </li>
+                    </div>
+                    <li>
+                        <label for="message">
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" tabindex="6"></textarea>
+                            <p id="res"></p>
+                        </label>
+                        
+                    </li>
+                    <li>
+                        <button type="submit">Enviar</button>
+                    </li>
+                </ul>
+            </fieldset>
+            
+        </form>
+    </section>
 </body>
 </html>
