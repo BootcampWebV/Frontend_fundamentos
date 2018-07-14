@@ -21,6 +21,10 @@ body {
     display:none;
 }
 
+.rojo {
+    color: red;
+}
+
 section#contact li.form-group label {
     display: none;
 }

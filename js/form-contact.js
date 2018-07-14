@@ -78,41 +78,30 @@ export class FormContact {
         const aCadena = sCadena.split(' ');
         //Contamos todos los trozos de cadenas que existen
         let wordCounter = aCadena.length;
+
         this.oRestoTextoMessageInput.innerHTML = `${wordCounter} de un máximo de ${wordTotal} palabras`;
-                
-        if (wordCounter >= wordTotal ) {
+             
+        if (wordCounter > Math.floor(wordTotal * 0.7)  ){
+                        
+            this.oRestoTextoMessageInput.classList.add('rojo');
+        }  
+        
+        if (wordCounter >= wordTotal) {
             this.oTextoMessageInput.setAttribute('disabled', true);
             //alert('Alcanzó el numero máximo de Palabras');
             setTimeout(() => {
-                this.oTextoMessageInput.setAttribute('disabled', false);
-            }, 1000);
-            //alert('Alcanzó el numero máximo de Palabras');
+                console.log('esto es setimeout');
+                this.oTextoMessageInput.removeAttribute('disabled');
+            }, 3000);
             
-        } 
+            
+        }         
+        
         
     }
     otroSlect() {
-        //let valorOpcion;
-        console.log(this.oOtroHiden);
-        console.log(this.oSelectSeleccion);
-        console.log('this.oSelectSeleccion.value', this.oSelectSeleccion.value)
-        
-        /*if (this.oSelectSeleccion.value === '') {
-             valorOpcion = 'op1';
-        } else {
-            valorOpcion = this.oSelectSeleccion.value;
-        }*/
-        console.log('this.oOtroHiden.classList', this.oOtroHiden.classList)
-        
-        //this.oOtroHiden.classList.toggle('hide');
-        console.log('this.oOtroHiden.classList segundo ', this.oOtroHiden.classList)
-        
-        if (this.oSelectSeleccion.value === 'op4') {
-            
-            this.oOtroHiden.classList.remove('hide');
-        } else {
-            this.oOtroHiden.classList.add('hide');
-        }
+               
+        this.oSelectSeleccion.value === 'op4' ? this.oOtroHiden.classList.remove('hide') : this.oOtroHiden.classList.add('hide');
         
         
     }
