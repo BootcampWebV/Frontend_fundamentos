@@ -24,8 +24,8 @@
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="label-toggle"></label>
             <ul>
-                <li >
-                    <a href="#home" class="activar">Home</a>
+                <li class="activar">
+                    <a href="#home">Home</a>
                 </li>
                 <li >
                     <a href="#quien-soy">Quien Soy</a>
@@ -45,21 +45,14 @@
             </ul>
         </nav>
     </nav>
-    <header>
-        <h1>Big ol' Lorem</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, sint corporis dolores omnis consectetur quaerat nesciunt
-            beatae maiores, itaque labore ex vero pariatur nulla non fugiat, facilis eaque sunt doloremque!</p>
-    </header>
+    
     <main>
         <section id="home">
             <header>
                 <h1>Cookie Monster</h1>
-                <p>bnmbnmbnmbnmbnm</p>
+                <p>Te da la Bien Venida a su Web.</p>
+                <img src="./assets/images/cookie-monster.png" alt="Logo de nuestro querido Cookie Monster">
             </header>
-            <article>
-                <h2></h2>
-                <p></p>
-            </article>
         </section>
         <section id="quien-soy">
             <header>
@@ -67,12 +60,18 @@
                 <p>Aqui podras conocerme</p>
             </header>
             <article>
-                <h2></h2>
-                <p></p>
+                <h2>Te cuento un poco de mi</h2>
+                <div class="columnas">
+                <blockquote cite="https://es.wikipedia.org/wiki/Monstruo_de_las_Galletas"></blockquote>El Monstruo de las Galletas (en inglés, Cookie Monster), también conocido como Triki en España o simplemente llamado Lucas
+                en Latinoamérica, es uno de los títeres del programa educativo infantil llamado Barrio Sésamo en España y Plaza Sésamo en
+                Hispanoamérica. Su aspecto está caracterizado por un pelo de color azul oscuro, una boca enorme desprovista de dientes, ojos grandes y saltones
+                y un voraz apetito característico, además de frases en las que expresa sus grandes ganas de comer: <i>«¡Yo querer galleta!»</i>,
+                <i>«¡Yo comer galleta!»</i> y <i>«¡Aumm ñam ñiam ñiam ñiam!», «¡Aumm ñam ñiam ñiam ñiam!» </i>(esta última onomatopéyica y pronunciada con la boca llena de comida).</blockquote>
                 <figure class="imagen">
-                    <img src="./assets/post-sample-image.jpg" alt="Astronauta en vuelo espacial mostrando un cartel de 'se vende'">
-                    <figcaption>To go places and do things that have never been done before – that’s what living is all about.</figcaption>
+                    <img src="./assets/images/mq-quiensoy.jpg" alt="Monster Cokie, saludando y presentandose.">
+                    <figcaption>Monster Cokie, saludando y presentandose, Quiero ser tu amigo y ¿tú?</figcaption>
                 </figure>
+            </div>
             </article>
         </section>
         <section id="estudios">
@@ -160,6 +159,19 @@
             </form>
         </section>
     </main>
-
+    <footer>
+        <address>You can contact author at
+            <a href="http://www.somedomain.com/contact">www.somedomain.com</a>.
+            <br> If you see any bugs, please
+            <a href="mailto:webmaster@somedomain.com">contact webmaster</a>.
+            <br> You may also want to visit us:
+            <br> Mozilla Foundation
+            <br> 1981 Landings Drive
+            <br> Building K
+            <br> Mountain View, CA 94043-0801
+            <br> USA
+        </address>
+    </footer>
+    
 </body>
 </html>

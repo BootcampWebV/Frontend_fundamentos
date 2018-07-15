@@ -1,10 +1,12 @@
 import { FormContact } from "./form-contact.js";
+import { Menu } from "./menu.js";
 
 
 export class Main {
     constructor() {
         
         this.oFormContact = new FormContact();
+        this.oMenu = new Menu();
         
         
     }
