@@ -28,7 +28,7 @@ export class FormContact {
         this.oSelectSeleccion.addEventListener('change',this.otroSlect.bind(this));
 
         this.oFormContact.addEventListener('submit', this.leerContact.bind(this));
-        //this.definirValidaciones();
+        this.definirValidaciones();
 
     }
     leerContact(oE) {
