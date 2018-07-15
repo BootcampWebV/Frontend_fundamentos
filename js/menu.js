@@ -1,21 +1,18 @@
 export class Menu {
     constructor(){
+        
+        this.aMenuItems = document.querySelectorAll("nav#menu-top a");
+        this.aSections = document.querySelectorAll("section");
+        this.oOffsets = [];
+        
+        this.aMenuItems.forEach(
+            (item) => { item.addEventListener('click', this.activarItem.bind(this)) };
+        )
+        window.addEventListener('scroll', this.changeMenuStyle.bind(this))
 
+        this.prepararNavegacion()
     }
-    toggleMenu(oE) {
-        oE.preventDefault()
-        // cambia su visibilidad
-        oE.target.classList.toggle('hide')
-        // cambia la visibilidad del otro icono
-        if (oE.target.previousElementSibling) {
-            oE.target.previousElementSibling.classList.toggle('hide')
-        } else {
-            oE.target.nextElementSibling.classList.toggle('hide')
-        }
-        // cambia la visibilidad del menu top para mobile
-        this.oMenuTop.classList.toggle('hide')
-    }
-
+    
     activarItem(oE) {
         console.log('Activando Item')
         this.aMenuItems.forEach(
@@ -26,18 +23,22 @@ export class Menu {
 
     changeMenuStyle() {
         let pageOffset = window.pageYOffset
-        let menuItem = 0
-        if (pageOffset >= this.oOffsets['#home'] && pageOffset < this.oOffsets['#about']) {
-            menuItem = 0
-        } else if (pageOffset >= this.oOffsets['#about'] && pageOffset < this.oOffsets['#contact']) {
-            menuItem = 1
-        } else {
-            menuItem = 3
+        let menuItem = 0;
+        if (pageOffset >= this.oOffsets['#home'] && pageOffset < this.oOffsets['#quien-soy']) {
+            menuItem = 0;
+        } else if (pageOffset >= this.oOffsets['#quien-soy'] && pageOffset < this.oOffsets['#estudios']) {
+            menuItem = 1;
+        } else if (pageOffset >= this.oOffsets['#estudios'] && pageOffset < this.oOffsets['#experiencia']){
+            menuItem = 2;
+        } else if (pageOffset >= this.oOffsets['#experiencia'] && pageOffset < this.oOffsets['#sobre-mi']) {
+            menuItem = 3;
+        } else if (pageOffset >= this.oOffsets['#sobre-mi'] && pageOffset < this.oOffsets['#contact']) {
+            menuItem = 4;
         }
         this.aMenuItems.forEach(
-            (item) => item.classList.remove('active')
+            (item) => item.classList.remove('activar')
         )
-        this.aMenuItems[menuItem].classList.add('active')
+        this.aMenuItems[menuItem].classList.add('activar');
     }
 
     prepararNavegacion() {
@@ -51,7 +52,7 @@ export class Menu {
     }
 
     cumulativeOffset(element) {
-        var top = 0;
+        let top = 0;
         do {
             top += element.offsetTop || 0;
             element = element.offsetParent;

@@ -208,7 +208,7 @@ font-size:11px;   /* Esto es el tamaño de letra  */
 }
 
 .cajaerror {
-background: #ffe8e8 url(URL DE TU ICONO DE ERROR) no-repeat 10px; 
+background: #ffe8e8  
 width: 580px;   /* Esto es el ancho de la caja de error*/ 
 padding: 7px 10px 7px 37px;   /* Separamos el contenido del borde*/ 
 border: 1px solid #ff8a8a;   /* Esto es el color y grosor del borde */    

@@ -78,7 +78,7 @@ export class FormContact {
         const aCadena = sCadena.split(' ');
         //Contamos todos los trozos de cadenas que existen
         let wordCounter = aCadena.length;
-
+        this.oRestoTextoMessageInput.classList.add('content-box-blue');
         this.oRestoTextoMessageInput.innerHTML = `${wordCounter} de un máximo de ${wordTotal} palabras`;
              
         if (wordCounter > Math.floor(wordTotal * 0.7)  ){
@@ -87,6 +87,7 @@ export class FormContact {
         }  
         
         if (wordCounter >= wordTotal) {
+            this.oRestoTextoMessageInput.classList.add('content-box-red');
             this.oTextoMessageInput.setAttribute('disabled', true);
             //alert('Alcanzó el numero máximo de Palabras');
             setTimeout(() => {
@@ -100,7 +101,6 @@ export class FormContact {
         
     }
     otroSlect() {
-               
         this.oSelectSeleccion.value === 'op4' ? this.oOtroHiden.classList.remove('hide') : this.oOtroHiden.classList.add('hide');
         
         
