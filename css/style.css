@@ -1,21 +1,226 @@
-/* Variables */
 :root {
     --color-texto: rgb(0, 0, 0);
-    --color-fondo: white; 
+    --color-fondo:white; 
     --color-boton: darkcyan;
-    --color-autores: darkgrey;
+    --color-triki: #0373bb;
     --color-activo: goldenrod;
 }
-/* The Scroll behavior */
+
 body {
-  scroll-behavior: smooth;
-  background-color: bisque;
-  color: var(--color-texto);
-  background-color: var(--color-fondo);
-  font-family: 'Open Sans', sans-serif;
+    background-color: var(--color-fondo);
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+}
+
+/* MENU-TOP */
+/*
+.top-wrapper header h1 { 
+    font-size: 1.25rem;
+}
+
+.top-wrapper header {
+    color:var(--color-fondo);
+    position: absolute;
+    z-index: 1;
+}
+
+.top-wrapper header {
+    top: 1rem;
+    left: 20%;
+    width: 50%;
+}
+
+nav a {
+    display: block;
+    padding: .5rem 1rem;
+    transition: all 0.8s linear;
+}
+
+.top-wrapper nav {
+    color: var(--color-fondo);
+    position: absolute;
+    z-index: 1;
+
+}
+
+nav.menu-icon {
+    font-size: 1.2rem;
+    right: 20%;
+    top: 1rem;
+    font-weight: 800;
+}
+
+nav.menu-top {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    left: 2%;
+    top: 13rem;
+    font-weight: 800;  
+
+    color: var(--color-autores);
+    background-color: var(--color-fondo);
+    width: 500%;
 }
 
 
+nav.menu-bottom {
+    background-color: var(--color-autores);
+}
+nav.menu-top {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    left: 2%;
+    top: 3rem;
+    font-weight: 800;  
+
+    color: var(--color-autores);
+    background-color: var(--color-fondo);
+    width: 100%;
+}*/
+
+
+/* HEADER interno con IMAGEN DE FONDO */
+/*
+section header {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: var(--color-fondo);
+    position: relative;
+}
+
+section#home header {
+    background-image: url(../assets/images/Home.jpg)
+}
+
+
+
+
+
+section#quien-soy header {
+    background-image: url(../assets/images/Home-MO.jpg);
+}
+
+
+
+
+section#contact header {
+    background-image: url(../assets/images/cm-contacto.jpg)
+}
+*/
+/* Section CONTACT */
+
+
+/*
+@media screen and (min-width: 900px) {
+
+    .hide {
+        display: initial;
+    }
+    nav.menu-icon, nav.menu-bottom {
+        display: none;
+    }
+
+    .top-wrapper {
+        display: flex;
+        position: fixed;
+        z-index: 2;
+        left: 0;
+        right: 0;
+        justify-content: space-around;
+        align-items: baseline;
+        color: var(--color-fondo);
+        background-color: var(--color-triki)
+    }
+*/
+    /* flex items */
+/*
+    .top-wrapper header {
+        position: static;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    nav.menu-top {
+        position: static;
+        width: auto;
+        color: inherit;
+        background-color: inherit;
+    }
+
+    nav.menu-top li {
+        display: inline-block;
+    }    
+
+    nav.menu-top a:hover {
+        color: antiquewhite;
+        background-color: var(--color-autores);
+        transform: scale(1.2);
+      }
+
+    section .content-wrapper, nav.content-wrapper {
+        width: 75%;
+        max-width: 40rem;
+        margin-top: 2rem;
+    }
+
+    .active {
+        color: var(--color-activo);
+    }
+}
+*/
+/**************************************/
+
+
+
+#home img{
+    width: 45vh; 
+    height: 45vh;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cajaaviso {
+background: #ffffe0 url(URL DE TU ICONO DE AVISO) no-repeat 10px;
+width: 580px; /* Esto es el ancho de la caja de aviso */ 
+padding: 7px 10px 7px 37px; /* Separamos un poco el contenido del borde*/
+border: 1px solid #f0ea8b; /* Esto es color del borde y su grosura  */
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px; /* Aplicamos un borde de radio a la imagen de aviso */
+font-size:11px; /* Esto es el tamaño de letra */
+}
+
+.cajaacierto {
+background: #dfffe4 url(URL DE TU ICONO DE ACIERTO) no-repeat 10px;
+width: 580px;  /* Esto es el ancho de la caja de acierto */  
+padding: 7px 10px 7px 37px;   /* Separamos un poco el contenido del borde */  
+border: 1px solid #94d19e;   /* Esto es el color y la grosura del borde*/  
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;   /* Ponemos un borde de radio a la imagen */  
+font-size:11px;   /* Esto es el tamaño de letra  */  
+}
+
+.cajaerror {
+background: #ffe8e8 url(URL DE TU ICONO DE ERROR) no-repeat 10px; 
+width: 580px;   /* Esto es el ancho de la caja de error*/ 
+padding: 7px 10px 7px 37px;   /* Separamos el contenido del borde*/ 
+border: 1px solid #ff8a8a;   /* Esto es el color y grosor del borde */    
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;   /* Aplicamos un borde de radio a la imagen de error*/    
+font-size:11px;   /* Esto es el tamaño de letra*/    
+}
+
+
+.active {
+        color: var(--color-activo);
+}
 
 .hide {
     display:none;
@@ -25,29 +230,3 @@ body {
     color: red;
 }
 
-section#contact li.form-group label {
-    display: none;
-}
-
-
-.error {
-  position: relative;
-  z-index: 1;
-  padding: 10px;
-  border-radius: 10px;
-  color: white;
-  width: 235px;
-  text-align: center; 
-  font-size: 12px;
-  background: RGB(194, 46, 79);
-}
-
-.error::after {
-    content: '';
-    border-bottom: 15px solid RGB(194, 46, 79);
-    border-right: 15px solid transparent;
-    border-left: 15px solid transparent;
-    position: absolute;
-    left: 45%;
-    top: -14px;
-}

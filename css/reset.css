@@ -1,7 +1,7 @@
 , *::after, *::before, *:after, *:before {
     box-sizing: border-box
+    
 }
-
 body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
@@ -20,7 +20,9 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
- img {
+img {
      width: 100%;
  }
+
+
+ 

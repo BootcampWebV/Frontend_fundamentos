@@ -4,99 +4,230 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="César Fernández">
+    <meta name="description" content="Practica funadamentos HTML CSS3 Y JS">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>currículum (CV)</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <title>Cookie Monster (CV)</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    
     <script src="./js/app.js" type="module"></script>
 </head>
 <body>
-
-    <header>
-        <h2>
-            <a href="#">Website Logo</a>
-        </h2>
-        <nav>
-            <li>
-                <a href="#">Quien Soy</a>
-            </li>
-            <li>
-                <a href="#">Estudios</a>
-            </li>
-            <li>
-                <a href="#">Experiencia</a>
-            </li>
-            <li>
-                <a href="#">Sobre mí</a>
-            </li>
-            <li>
-                <a href="#contact">contacto</a>
-            </li>
-        </nav>
-    </header>
-
-
-
-
-    <section id="contact">
-        <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
-        <form name="myFor" id="myForm" action="/" method="post">
-            
-            <legend> Contacto</legend>
-            <fieldset>
+    <div class="grid-wrapper">
+        <div class="top-wrapper">
+            <header>
+                <nav class="menu-icon">
+                    <a id="menu-btn-1" class="fas fa-bars" href="#menu-bottom"></a>
+                    <a id="menu-btn-2" class="fas fa-times" href="#menu-bottom"></a>
+                </nav>
+            </header>
+            <nav id="menu-top" class="menu-top">
                 <ul>
-                    <li>
-                        <label for="name">
-                            <input type="text" name="name" id="name" placeholder="Nombre" tabindex="1" required>
-                        </label>
-                        
+                    <li class="menu-item">
+                        <a href="#home" class="active">Home</a>
                     </li>
-                    <li>
-                        <label for="email" required>
-                            <input type="email" name="email" id="email" placeholder="Email Address" tabindex="2" pattern:
-                            "pattern: [a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
-                        </label>
-                        
+                    <li class="menu-item">
+                        <a href="#quien-soy">Quien Soy</a>
                     </li>
-                    <li>
-                        <label for="telNum">
-                            <input type="tel" name="telNum" id="telNum" placeholder="Telefono" tabindex="3" pattern="[0-9]{9}" required>
-                        </label>
-                        
+                    <li class="menu-item">
+                        <a href="#estudios">Estudios</a>
                     </li>
+                    <li class="menu-item">
+                        <a href="#experiencia">Experiencia</a>
+                    </li class="menu-item">
                     <li>
-                        <label for="selection">
-                            <select name="selection" id="selection" tabindex="4">
-                                <option value="op0" selected>¿Como me has conocido?</option>
-                                <option value="op1" >Buscadores Web</option>
-                                <option value="op2">En el Bar</option>
-                                <option value="op3">En el Cine</option>
-                                <option value="op4">Otros</option>
-                            </select>
-                        </label>
-                        <div id="form-otro" class="hide">
-                          
-                            <label for="otros">¿Ande?</label>
-                            <input type="text" name="otros" id="otros" placeholder="¿Ande?" tabindex="5">
-                            
-                        </div>
+                        <a href="#sobre-mi">Sobre mí</a>
                     </li>
-                    
-                    <li>
-                        <label for="message">
-                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" tabindex="6"></textarea>
-                            <p id="res"></p>
-                        </label>
-                        
-                    </li>
-                    <li>
-                        <button type="submit">Enviar</button>
+                    <li class="menu-item">
+                        <a href="#contact">Contacto</a>
                     </li>
                 </ul>
-            </fieldset>
-            
-        </form>
-    </section>
+            </nav>
+        </div>
+        <div>
+            <main>
+                <div>
+                    <section id="home">
+                        <header>
+                            <h1>Cookie Monster</h1>
+                            <img src="./assets/images/cookie-monster.png" alt="">
+                            <p>bnmbnmbnmbnmbnm</p>
+                        </header>
+                        <article>
+                            <h2></h2>
+                            <p></p>
+                        </article>
+                    </section>
+                </div>
+                <div class="">
+                    <section id="quien-soy">
+                        <header>
+                            <h1>Quien Soy</h1>
+                            <p>Aqui podras conocerme</p>
+                        </header>
+                        <article>
+                            <h2></h2>
+                            <p></p>
+                            <figure class="imagen">
+                                <img src="./assets/post-sample-image.jpg" alt="Astronauta en vuelo espacial mostrando un cartel de 'se vende'">
+                                <figcaption>To go places and do things that have never been done before – that’s what living is all about.</figcaption>
+                            </figure>
+                        </article>
+                    </section>
+                </div>
+                <div class="" >
+                    <section id="estudios">
+                        <header>
+                            <h1></h1>
+                            <p></p>
+                        </header>
+                        <article>
+                            <h2></h2>
+                            <p></p>
+                        </article>
+                    </section>
+                </div>
+                <div class="">
+                    <section id="experiencia">
+                        <header>
+                            <h1></h1>
+                            <p></p>
+                        </header>
+                        <article>
+                            <h2></h2>
+                            <p></p>
+                        </article>
+                    </section>
+                </div>
+                <div class="">
+                    <section id="sobre-mi">
+                        <header>
+                            <h1></h1>
+                            <p></p>
+                        </header>
+                        <article>
+                            <h2></h2>
+                            <p></p>
+                            <figure>
+                                <iframe width="800" height="315" src="https://www.youtube.com/embed/E1vdXYnE4PY?rel=0" frameborder="0" allow="autoplay; encrypted-media"
+                                    allowfullscreen>
+                                </iframe>
+                            </figure>
+                        </article>
+                    </section>
+                </div>
+                <div class="grid-item" >
+                    <section id="contact">
+                        <header>
+                            <h1>Nuestro Contacto</h1>
+                        </header>
+                        <div class="form-contain">
+                            <div class="form-wrapper">
+                                <div class="form-contacts">
+                                    <h3>Our contacts</h3>
+                                    
+                                    
+                                </div>
+                                    <div class="form-body">
+                                        <form name="myFor" id="myForm" class="Form-grid" action="/" method="post">
+                                                <p class="form-group">
+                                                    <label for="name">Nombre</label>
+                                                    <input type="text" name="name" id="name" placeholder="Nombre" tabindex="1" required>
+                                                
+                                                </p>
+                                                <p class="form-group">
+                                                    <label for="email" required>Email</label>
+                                                    <input type="email" name="email" id="email" placeholder="Email Address" tabindex="2" pattern:
+                                                        "pattern: [a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
+                                                
+                                                </p>
+                                                <p class="form-group">
+                                                    <label for="telNum">Teléfono</label>
+                                                    <input type="tel" name="telNum" id="telNum" placeholder="Telefono" tabindex="3" pattern="[0-9]{9}" required>
+                                                
+                                                </p>
+                                                <p class="form-group">
+                                                    <label for="selection">¿Cómo me has conocido?</label>
+                                                    <select name="selection" id="selection" tabindex="4">
+                                                        <option value="op0" selected>¿Como me has conocido?</option>
+                                                        <option value="op1">Buscadores Web</option>
+                                                        <option value="op2">En el Bar</option>
+                                                        <option value="op3">En el Cine</option>
+                                                        <option value="op4">Otros</option>
+                                                    </select>
+                                                    <div id="form-otro" class="form-group">
+                                                        <p>
+                                                        <label for="otros">¿Ande?</label>
+                                                        <input type="text" name="otros" id="otros" placeholder="¿Ande?" tabindex="5">
+                                                        </p>
+                                                    </div>
+                                                </p>
+                                                
+                                                <p>
+                                                    <label for="message">Cuéntame, ¿en que te puedo ayudar....?</label>
+                                                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" tabindex="6"></textarea>
+                                                    <p id="res"></p>
+                                                    <div class="cajaaviso">Aqui escribe el contenido de la caja de aviso</div>
+                                                </p>
+                                                <p>
+                                                    <button type="submit">Enviar</button>
+                                                </p>
+                                            
+                                        </form>
+                                    </div>
+                            </div>
+                               
+                    </section>
+                </div>
+            </main>
+        </div>
+        <div>
+            <footer>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#" title="Twitter">
+                                <span class="fa-stack fa-2x">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/CookieMonster/" title="Facebook" target="_blank">
+                                <span class="fa-stack fa-2x">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Github">
+                                <span class="fa-stack fa-2x">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <p>
+                    <small>Copyright © Your Website 2018</small>
+                </p>
+                <ul>
+                    <li>Monster Cookies</li>
+                    <li>Sesame Street</li>
+                    <li>34-123456789-11</li>
+                    <li>monster.cookies@themuppets.com</li>
+                </ul>
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
