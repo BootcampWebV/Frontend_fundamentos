@@ -66,7 +66,7 @@ export class FormContact {
     wordCount(oE) {
         console.dir(oE.target.value);
         let sCadena = oE.target.value;
-        const wordTotal = 5;
+        const wordTotal = 150;
         
         //Quitamos los saltos de linea
         sCadena = sCadena.replace(/(\r\n|\n|\r)/gm, ' ');
